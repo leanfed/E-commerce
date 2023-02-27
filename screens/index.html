@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/f552689564.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="../assets/css/base/base.css">
+    <link rel="stylesheet" href="../assets/css/components/home/header.css">
+    <link rel="stylesheet" href="../assets/css/components/home/hero.css">
+    <link rel="stylesheet" href="../assets/css/components/home/products.css">
+    <link rel="stylesheet" href="../assets/css/components/home/footer.css">
+    <link rel="stylesheet" href="../assets/css/components/home/rodapie.css">
+
+</head>
+
+<body>
+    <section class="header container">
+        <header class="header--izquierda">
+            <a href="./index.html"><img src="../assets/img/logo.png" alt="Logotipo AluraGeek" class="header__logo" /></a>
+            <div class="header__buscador">
+                <form>
+                    <input type="search" class="header__buscador-input" placeholder="¿Qué producto esta buscando?" data-buscador>
+                    <i class="header__buscador-icon fa fa-search"></i>
+                </form>
+            </div>
+            <div class="header__resultado"></div>
+        </header>
+        <button class="header__login-boton"><a href="/screens/log.html">Usuario</a></button>
+        <i class="header__buscador-icon-responsive fa fa-search"></i>
+    </section>
+
+    <section class="hero">
+        <div class="hero__transparent">
+            <div class="hero__title container">
+                <h1 class="hero__title__info">Febrero Promocional</h1>
+                <h3 class="hero__title__subsection">Productos seleccionados con 33% de descuento</h3>
+                <button class="hero__title-button"><a href="#category-consolas">Ver Consolas</a></button>
+            </div>
+        </div>
+    </section>
+
+    <section class="productos container">
+        <div class="productos__category">
+            <div class="productos__header">
+                <h2 class="productos__title">Star Wars</h2>
+                <div class="productos__header--vertodo">
+                    <a class="productos__header-link" href="/screens/todosProductos.html">Ver Todo</a>
+                    <i class="productos__header-icon fas fa-arrow-right"></i>
+                </div>
+            </div>
+
+            <div class="productos__line" data-starwars></div>
+        </div>
+        <div class="productos__category" id="category-consolas">
+            <div class="productos__header">
+                <h2 class="productos__title">Consolas</h2>
+                <div class="productos__header--vertodo">
+                    <a class="productos__header-link" href="/screens/todosProducts.html">Ver Todo</a>
+                    <i class="productos__header-icon fas fa-arrow-right"></i>
+                </div>
+            </div>
+
+            <div class="productos__line" data-consolas></div>
+        </div>
+
+        <div class="productos__category">
+            <div class="productos__header">
+                <h2 class="productos__title">Diversos</h2>
+                <div class="productos__header--vertodo">
+                    <a class="productos__header-link" href="/screens/todosProductos.html">Ver Todo</a>
+                    <i class="productos__header-icon fas fa-arrow-right"></i>
+                </div>
+            </div>
+
+            <div class="productos__line" data-diversos>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="footer">
+        <div class="footer__container container">
+            <div class="footer__izquierda">
+                <img src="../assets/img/logo.png" alt="Logotipo AluraGeek" class="footer__izquierda-logo" />
+
+                <nav>
+                    <ul class="footer__link-nav">
+                        <li class="footer__link"><a href="#">Quienes Somos</a></li>
+                        <li class="footer__link"><a href="#">Política de privacidad</a></li>
+                        <li class="footer__link"><a href="#">Programa de fidelidad</a></li>
+                        <li class="footer__link"><a href="#">Nuestras Tiendas</a></li>
+                        <li class="footer__link"><a href="#">Quiero ser franquiciado</a></li>
+                        <li class="footer__link"><a href="#">Anúncie aquí</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer__contacto">
+                <h2 class="footer__contacto-title">Hable con nosotros</h2>
+
+                <form action="" class="footer__form" data-footer>
+
+                    <div class="footer__input-container">
+                        <input class="footer__input" type="text" name="name" placeholder="Nombre" required
+                            maxlength="40" data-tipo="nombreFooter">
+                        <span class="input-message-error"></span>
+                    </div>
+
+                    <div class="footer__input-container">
+                        <textarea class="footer__textarea" placeholder="Escribe tu mensaje" name="mensaje" required
+                            maxlength="120" data-tipo="mensajeFooter"></textarea>
+                        <span class="input-message-error"></span>
+                    </div>
+
+                    <input type="submit" value="Enviar Mensaje" class="footer__button">
+                </form>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="rodapie container">
+        <div class="rodapie__container">
+            <p>Desarrollado por Federico Sosa </p>
+            <p>2023</p>
+        </div>
+    </section>
+    <script type="module" src="/controllers/productos-home-controller.js"></script>
+    <script type="module" src="/controllers/inputs-controller.js"></script>
+    <script type="module" src="/controllers/buscar-productos-controller.js"></script>
+</body>
+
+</html>

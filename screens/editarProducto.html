@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New product</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/f552689564.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../assets/css/base/base.css">
+    <link rel="stylesheet" href="../assets/css/components/home/header.css">
+    <link rel="stylesheet" href="../assets/css/components/home/hero.css">
+    <link rel="stylesheet" href="../assets/css/components/home/products.css">
+    <link rel="stylesheet" href="../assets/css/components/home/footer.css">
+    <link rel="stylesheet" href="../assets/css/components/home/rodapie.css">
+    <link rel="stylesheet" href="../assets/css/components/new-product.css">
+
+</head>
+
+<body>
+   
+   <section class="header container">
+    <header class="header--izquierda">
+        <a href="./index.html"><img src="../assets/img/logo.png" alt="Logotipo AluraGeek" class="header__logo" /></a>
+        <div class="header__buscador">
+            <form>
+                <input type="search" class="header__buscador-input" placeholder="¿Qué desea buscar?" data-buscador>
+                <i class="header__buscador-icon fa fa-search"></i>
+            </form>
+        </div>
+        <div class="header__resultado"></div>
+    </header>
+    <button class="header__login-boton"><a href="/screens/admin-product.html">Menú Administrador</a></button>
+    <i class="header__buscador-icon-responsive fa fa-search"></i>
+</section>
+
+    <section class="new-product container">
+        <div class="new-product__container">
+            <h2 class="new-producto__title">Editar producto</h2>
+
+            <form action="" class="new-producto__form" data-form>
+                <div class="new-producto__input-container">
+                    <input class="new-producto__input" type="url" name="image" placeholder="URL de imagen" required data-url data-tipo="urlNewProduct">
+                    <span class="input-message-error"></span>
+                </div>
+
+                <div class="new-producto__input-container">
+                    <input class="new-producto__input" type="text" name="name" placeholder="Nombre del Producto" required maxlength="20" data-name data-tipo="nameNewProduct" >
+                    <span class="input-message-error"></span>
+                </div>
+
+                <div class="new-producto__input-container">
+                    <input class="new-producto__input" type="number" name="precio" placeholder="Precio del producto" required data-price data-tipo="priceNewProduct">
+                    <span class="input-message-error"></span>
+                </div>
+
+                <div class="new-producto__input-container">
+                    <select class="new-producto__input" name="category" required data-category>
+                        <option class="new-producto__input-option" value="starwars">starwars</option>
+                        <option class="new-producto__input-option" value="consolas">consolas</option>
+                        <option class="new-producto__input-option" value="diversos">diversos</option>
+                    </select>
+                 </div>
+                
+                <div class="new-producto__input-container">
+                   <textarea name="descripcion" id="" cols="30" rows="10" class="new-producto__textarea" required maxlength="150" placeholder="Descripción" data-description data-tipo="descriptionNewProduct"></textarea>
+                    <span class="input-message-error"></span>
+                </div>
+
+                <input type="submit" value="Editar producto" class="new-producto__button">
+            </form>
+        </div>
+    </section>
+    <script type="module" src="../controllers/actualizar-productos-controller.js"></script>
+    <script type="module" src="../controllers/inputs-controller.js"></script>
+    <script type="module" src="../controllers/buscar-productos-controller.js"></script>
+</body>
+
+</html>
